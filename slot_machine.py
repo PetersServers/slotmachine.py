@@ -1,0 +1,5 @@
+
+def lever(commitment):
+    '''
+    Todo
+    '''
