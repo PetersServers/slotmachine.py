@@ -1,8 +1,8 @@
-
 def print_machine(symbols, text):
-    '''
-    Todo
-    '''
+    _print_top()
+    _print_slots(symbols)
+    _print_base()
+    _print_text(text)
 
 
 def _print_top():
@@ -19,8 +19,3 @@ def _print_text(text):
     print("|  " + text + "  |")
     print("+------------+")
 
-def print_machine(symbols, text):
-    _print_top()
-    _print_slots(symbols)
-    _print_base()
-    _print_text(text)
