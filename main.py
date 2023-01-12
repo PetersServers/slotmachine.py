@@ -6,14 +6,7 @@
 </confirmation>
 """
 
-# Uncomment for working in PyCharm
-# import slot_machine, printer
 
-# Uncomment for testing in Artemis
-# Uncomment for working in PyCharm
-# import slot_machine, printer
-
-# Uncomment for testing in Artemis
 from assignment import slot_machine, printer
 
 def pull_lever(commitment):
@@ -31,9 +24,9 @@ def insert_coin(money):
     commitment = int(input("Insert coin (5, 10, 20): "))
     if commitment == 0:
         raise QuitAddiction("User quit the game")
-    # other logic for checking money and valid commitment
-    # ...
-
+   if commitment > money:
+        print("You do not have the money")
+        return money
     elif commitment > money:
         print("You do not have the money")
         return money
