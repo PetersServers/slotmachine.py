@@ -33,6 +33,7 @@ def insert_coin(money):
         print("Wrong Coin")
         return money
     elif commitment < 0: 
+        print("Wrong Coin")
         return 0
     
     else:
