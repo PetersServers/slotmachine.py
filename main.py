@@ -20,11 +20,16 @@ def pull_lever(commitment):
         printer.print_machine(symbols, 'U LOST ' + str(commitment) + '$')
     return profit
 
+class QuitAddiction(Exception):
+    pass
 
 def insert_coin(money):
     commitment = int(input("Insert coin (5, 10, 20): "))
     if commitment == 0:
-        raise QuitAddiction
+        raise QuitAddiction("User quit the game")
+    # other logic for checking money and valid commitment
+    # ...
+
     elif commitment > money:
         print("You do not have the money")
         return money
