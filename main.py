@@ -5,37 +5,20 @@
     Yes [ ]    No [x]
 </confirmation>
 """
+from slot_machine import SlotMachine
+from printer import Printer
 
-# Uncomment for working in PyCharm
-# import slot_machine, printer
+def main():
+    machine = SlotMachine()
+    printer = Printer()
+    while True:
+        bet = int(input('Enter your bet: '))
+        symbols, text = machine.play(bet)
+        printer.print_machine(symbols, text)
+        if machine.wins >= 2 and machine.losses >= 5:
+            print('You lost all your money')
+            break
 
-# Uncomment for testing in Artemis
-from assignment import slot_machine, printer
+if __name__ == '__main__':
+    main()
 
-def pull_lever(commitment):
-    profit, symbols = slot_machine.lever(commitment)
-    if profit > 0:
-        printer.print_machine(symbols, 'U WON ' + str(profit) + '$')
-    else:
-        printer.print_machine(symbols, 'U LOST ' + str(commitment) + '$')
-    return profit
-
-
-def insert_coin(money):
-    print('How much you want to insert (5, 10, 20)')
-    commitment = int(input('0 to quit: '))
-    """
-    TODO
-    """
-
-
-def main(user_name, money):
-    print('Welcome', user_name, 'you have', money, 'coins')
-    while money >= 5:
-        money += insert_coin(money)
-        print('You have now', money, '$')
-    print('You are out of money!')
-
-
-if __name__ == "__main__":
-    main('Heisenberg', 100)
