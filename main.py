@@ -26,7 +26,7 @@ def insert_coin(money):
 
     elif commitment > money:
         print("You do not have the money")
-        return 0
+        return money
     elif commitment not in [5, 10, 20]:
         print("Wrong Coin")
         return money
