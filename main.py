@@ -32,7 +32,7 @@ def insert_coin(money):
     elif commitment not in [5, 10, 20]:
         print("Wrong Coin")
         return money
-    elif commitment > money
+    
     else:
         profit = pull_lever(commitment)
         return money + profit - commitment
