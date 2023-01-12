@@ -38,7 +38,7 @@ def insert_coin(money):
     
     else:
         profit = pull_lever(commitment)
-        return money + profit - commitment
+        return profit - commitment
 
 
 
