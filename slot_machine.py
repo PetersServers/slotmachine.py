@@ -1,20 +1,13 @@
-import random
-
+def lever(commitment):
+    '''
+    Todo
+    '''
+    
 win_probability = 0.9
 WIN_MULTIPLICATOR = 10
 UNFAIRNESS_FACTOR = 2
 
-def lever(commitment: int) -> Tuple[int, Tuple[str,str,str]]:
-    win = random.uniform(0, 1) < win_probability
-    if win:
-        symbols = _get_same_symbols()
-        profit = commitment * WIN_MULTIPLICATOR
-        win_probability /= UNFAIRNESS_FACTOR
-    else:
-        symbols = _get_different_symbols()
-        profit = 0
-    return (profit, symbols)
-
+    
 import random
 
 SYMBOLS = ('A', 'B', 'C', 'D', 'E')
