@@ -33,7 +33,7 @@ def insert_coin(money):
         print("Wrong Coin")
         return money
     if commitment < 0: 
-        return money
+        return 0
     
     else:
         profit = pull_lever(commitment)
