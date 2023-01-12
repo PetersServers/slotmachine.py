@@ -1,7 +1,7 @@
 import random
 from typing import Tuple
 
-def lever(commitment: int) -> Tuple[int, Tuple[str,str,str]]:
+def lever(commitment:
     win = random.uniform(0, 1) < win_probability
     if win:
         symbols = _get_same_symbols()
