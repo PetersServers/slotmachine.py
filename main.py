@@ -22,11 +22,19 @@ def pull_lever(commitment):
 
 
 def insert_coin(money):
-    print('How much you want to insert (5, 10, 20)')
-    commitment = int(input('0 to quit: '))
-    """
-    TODO
-    """
+    commitment = int(input("Insert coin (5, 10, 20): "))
+    if commitment == 0:
+        raise QuitAddiction
+    elif commitment > money:
+        print("You do not have the money")
+        return money
+    elif commitment not in [5, 10, 20]:
+        print("Wrong Coin")
+        return money
+    else:
+        profit = pull_lever(commitment)
+        return money + profit - commitment
+
 
 
 def main(user_name, money):
