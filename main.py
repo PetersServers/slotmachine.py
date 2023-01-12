@@ -24,6 +24,7 @@ def insert_coin(money):
     if commitment == 0:
         raise QuitAddiction("User quit the game")
 
+
     elif commitment > money:
         print("You do not have the money")
         return money
