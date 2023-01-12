@@ -1,6 +1,13 @@
 import random
 from typing import Tuple
 
+
+    
+win_probability = 0.9
+WIN_MULTIPLICATOR = 10
+UNFAIRNESS_FACTOR = 2
+
+
 def lever(commitment: int) -> Tuple[int, Tuple[str,str,str]]:
     win = random.uniform(0, 1) < win_probability
     if win:
@@ -12,13 +19,6 @@ def lever(commitment: int) -> Tuple[int, Tuple[str,str,str]]:
         profit = 0
     return (profit, symbols)
 
-    
-win_probability = 0.9
-WIN_MULTIPLICATOR = 10
-UNFAIRNESS_FACTOR = 2
-
-    
-import random
 
 SYMBOLS = ('A', 'B', 'C', 'D', 'E')
 
