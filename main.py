@@ -2,7 +2,7 @@
 <confirmation>
     Do not modify this header, but only the checkbox mark.
     I confirm that I solved the exercises on my own, and I am able to present my solution:
-    Yes [ ]    No [x]
+    Yes [ ]    No []
 </confirmation>
 """
 
