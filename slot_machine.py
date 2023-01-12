@@ -1,3 +1,7 @@
+win_probability = 0.9
+WIN_MULTIPLICATOR = 10
+UNFAIRNESS_FACTOR = 2
+
 def lever(commitment):
     '''
     Todo
