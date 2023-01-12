@@ -23,22 +23,19 @@ def insert_coin(money):
     commitment = int(input("Insert coin (5, 10, 20): "))
     if commitment == 0:
         raise QuitAddiction("User quit the game")
-    # other logic for checking money and valid commitment
-    # ...
 
     elif commitment > money:
         print("You do not have the money")
         return 0
-    elif commitment not in [5, 10, 20]:
-        print("Wrong Coin")
-        return money
     elif commitment < 0: 
         print("Wrong Coin")
         return 0
-    
+    elif commitment not in [5, 10, 20]:
+        print("Wrong Coin")
+        return money
     else:
         profit = pull_lever(commitment)
-        return profit - commitment
+        return money + profit - commitment
 
 
 
