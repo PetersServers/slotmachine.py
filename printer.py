@@ -4,10 +4,9 @@ def print_machine(symbols, text):
     Todo
     '''
 
-this is slot_machine.py 
 
-
-def lever(commitment):
-    '''
-    Todo
-    '''
+def _print_top():
+    print("+------------+")
+    print("|            |")
+    print("|            |")
+    print("+------------+")
