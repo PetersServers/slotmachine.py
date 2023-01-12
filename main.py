@@ -10,6 +10,10 @@
 # import slot_machine, printer
 
 # Uncomment for testing in Artemis
+# Uncomment for working in PyCharm
+# import slot_machine, printer
+
+# Uncomment for testing in Artemis
 from assignment import slot_machine, printer
 
 def pull_lever(commitment):
