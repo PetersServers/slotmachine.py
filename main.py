@@ -6,10 +6,6 @@
 </confirmation>
 """
 
-# Uncomment for working in PyCharm
-# import slot_machine, printer
-
-# Uncomment for testing in Artemis
 from assignment import slot_machine, printer
 
 def pull_lever(commitment):
@@ -30,10 +26,11 @@ def insert_coin(money):
 
     elif commitment > money:
         print("You do not have the money")
-        return money
+        return 0
     elif commitment not in [5, 10, 20]:
         print("Wrong Coin")
         return money
+    elif commitment > mone
     else:
         profit = pull_lever(commitment)
         return money + profit - commitment
